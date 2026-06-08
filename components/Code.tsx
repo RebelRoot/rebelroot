@@ -39,6 +39,7 @@ export default function Code({
 
   return (
     <>
+      {/* @ts-ignore */}
       <Highlight {...defaultProps} theme={undefined} code={code} language={language}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <>
