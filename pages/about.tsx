@@ -57,7 +57,7 @@ export default function AboutPage() {
           <Container>
             <FounderCard>
               <FounderImageWrapper>
-                <FounderAvatar>👨&zwj;💻</FounderAvatar>
+                <FounderImage src="/paras-agarwal.jpg" alt="Paras Agarwal" />
               </FounderImageWrapper>
               <FounderInfo>
                 <OverTitle>The Founder</OverTitle>
@@ -182,10 +182,13 @@ const FounderImageWrapper = styled.div`
   align-items: center;
   border: 2px solid rgba(var(--primary), 0.2);
   box-shadow: var(--shadow-md);
+  overflow: hidden;
 `;
 
-const FounderAvatar = styled.span`
-  font-size: 7rem;
+const FounderImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 const FounderInfo = styled.div`
