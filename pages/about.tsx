@@ -57,7 +57,7 @@ export default function AboutPage() {
           <Container>
             <FounderCard>
               <FounderImageWrapper>
-                <FounderImage src="/paras-agarwal.jpg" alt="Paras Agarwal" />
+                <FounderImage src="https://1i81vatywd5bjk3l.public.blob.vercel-storage.com/PARAS%20AGARWAL" alt="Paras Agarwal" />
               </FounderImageWrapper>
               <FounderInfo>
                 <OverTitle>The Founder</OverTitle>
