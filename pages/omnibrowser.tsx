@@ -40,6 +40,10 @@ cd omni-browser`;
             <Subtitle>
               Omni Browser is a state-of-the-art mobile browser developed by the RebelRoot collective. Powered by Mozilla&apos;s GeckoView engine, it provides built-in ad blocking, Firefox extensions, offline ML translation, and secure sandbox mechanics.
             </Subtitle>
+
+            <ScreenshotWrapper>
+              <ScreenshotImage src="/omni-browser-screenshot.png" alt="Omni Browser Mobile User Interface" />
+            </ScreenshotWrapper>
           </IntroContent>
         </IntroSection>
 
@@ -321,6 +325,29 @@ const IntroContent = styled(Container)`
   flex-direction: column;
   align-items: center;
   max-width: 80rem;
+`;
+
+const ScreenshotWrapper = styled.div`
+  margin-top: 5rem;
+  width: 100%;
+  max-width: 32rem;
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+`;
+
+const ScreenshotImage = styled.img`
+  width: 100%;
+  border-radius: 3rem;
+  border: 10px solid rgb(var(--secondBackground));
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(var(--primary), 0.1);
+  transform: rotateX(5deg);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+  &:hover {
+    transform: rotateX(0deg) scale(1.02);
+    box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.6), 0 0 50px rgba(var(--primary), 0.2);
+  }
 `;
 
 const BrowserLogoWrapper = styled.div`
