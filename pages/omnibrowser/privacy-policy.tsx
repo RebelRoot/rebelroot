@@ -218,24 +218,33 @@ const TableWrapper = styled.div`
 `;
 
 const StyledTable = styled.table`
-  width: 100%;
-  border-collapse: collapse;
+  width: 100% !important;
+  border-collapse: collapse !important;
   font-size: 1.5rem;
 
   th, td {
-    padding: 1.5rem 2rem;
-    border-bottom: 1px solid rgba(var(--text), 0.08);
+    padding: 1.5rem 2rem !important;
+    border: 1px solid rgba(var(--text), 0.08) !important;
     text-align: left;
     vertical-align: top;
   }
 
+  tr:nth-child(even) {
+    background: rgba(var(--text), 0.04) !important;
+  }
+
+  tr:nth-child(odd) {
+    background: transparent !important;
+  }
+
   th {
-    background: rgba(var(--secondary), 0.08);
+    background: rgba(var(--secondary), 0.2) !important;
     font-weight: bold;
+    color: rgb(var(--text)) !important;
   }
 
   tr:last-child td {
-    border-bottom: none;
+    border-bottom: 1px solid rgba(var(--text), 0.08) !important;
   }
   
   td:first-child {
