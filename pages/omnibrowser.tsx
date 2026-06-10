@@ -312,6 +312,10 @@ const MainWrapper = styled.div`
 
   & > section {
     padding: 8rem 0;
+
+    ${media('<=tablet')} {
+      padding: 5rem 0;
+    }
   }
 `;
 
@@ -421,6 +425,7 @@ const ArchFlow = styled.div`
   gap: 2rem;
 
   ${media('<=desktop')} {
+    flex-direction: column;
     justify-content: center;
   }
 `;
@@ -456,7 +461,8 @@ const ArchConnector = styled.div`
   font-weight: bold;
 
   ${media('<=desktop')} {
-    display: none;
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
   }
 `;
 
@@ -484,6 +490,10 @@ const FeatureCard = styled.div`
   &:hover {
     transform: translateY(-5px);
     border-color: rgba(var(--primary), 0.3);
+  }
+
+  ${media('<=tablet')} {
+    padding: 2.5rem;
   }
 `;
 
@@ -530,10 +540,20 @@ const RepoContainer = styled.div`
   font-family: monospace;
   font-size: 1.5rem;
   box-shadow: var(--shadow-md);
+  overflow-x: auto;
+
+  ${media('<=tablet')} {
+    padding: 2.5rem;
+    font-size: 1.3rem;
+  }
 `;
 
 const RepoNode = styled.div`
   margin-left: 2rem;
+
+  ${media('<=tablet')} {
+    margin-left: 1rem;
+  }
 `;
 
 const RepoFolder = styled.div`
@@ -552,6 +572,11 @@ const RepoTree = styled.div`
   border-left: 1px dashed rgba(var(--text), 0.2);
   margin-left: 1rem;
   padding-left: 1rem;
+
+  ${media('<=tablet')} {
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+  }
 `;
 
 const BuildSection = styled.section``;
@@ -654,6 +679,22 @@ const ComparisonTable = styled.table`
 
   tr:last-child td {
     border-bottom: none;
+  }
+
+  /* Sticky first column */
+  th:first-child, td:first-child {
+    position: sticky;
+    left: 0;
+    background: rgb(var(--secondBackground));
+    z-index: 1;
+    border-right: 1px solid rgba(var(--text), 0.08);
+    box-shadow: 2px 0 5px -2px rgba(0, 0, 0, 0.1);
+  }
+
+  th:first-child {
+    background: rgb(var(--secondBackground));
+    background-image: linear-gradient(rgba(var(--secondary), 0.1), rgba(var(--secondary), 0.1));
+    z-index: 2;
   }
 
   /* Highlight Omni Browser column */
