@@ -35,7 +35,7 @@ export default function CookiesPolicyPage() {
 
           <h3>3. Third-Party Web Links</h3>
           <p>
-            Our site contains links to other independent platforms (e.g., GitHub, Twitter, Sponsor pages). These services have their own cookie policies once you navigate to their domains.
+            Our site contains links to other independent platforms (e.g., GitHub, Sponsor pages). These services have their own cookie policies once you navigate to their domains.
           </p>
         </RichText>
       </CookiesPolicyContainer>
