@@ -16,8 +16,8 @@ export default function AboutPage() {
         {/* Mission / Mindset Section */}
         <Section>
           <Container>
-            <OverTitle>Our Mindset &amp; Philosophy</OverTitle>
-            <SectionTitle>Empowering Digital Sovereignty</SectionTitle>
+            <CustomOverTitle>Our Mindset &amp; Philosophy</CustomOverTitle>
+            <CustomSectionTitle>Empowering Digital Sovereignty</CustomSectionTitle>
             <ContentText>
               RebelRoot is an independent, developer-led collective born out of a simple conviction: <strong>your data belongs to you</strong>. 
               In an era of unchecked tracking, intrusive advertising, and centralized corporate data storage, we stand for digital sovereignty. 
@@ -223,4 +223,18 @@ const ButtonGroup = styled.div`
     justify-content: center;
     flex-wrap: wrap;
   }
+`;
+
+const CustomOverTitle = styled(OverTitle)`
+  line-height: 1.6;
+  margin-bottom: 2rem;
+
+  ${media('<=desktop')} {
+    line-height: 1.6;
+  }
+`;
+
+const CustomSectionTitle = styled(SectionTitle)`
+  text-align: left;
+  margin-bottom: 3rem;
 `;
